@@ -15,7 +15,7 @@ const Main = () => {
               <span className="purple">Bibliothek</span>
             </h2>
             <a className="space" href="#features">
-              <button className="taste">Bücher du chstöbern</button>
+              <button className="taste">Bücher durchsuchen</button>
             </a>
           </div>
           <figure className="header__img--wrapper">
