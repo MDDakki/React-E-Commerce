@@ -76,6 +76,14 @@ button:active {
   transform: translateY(1px);
 }
 
+
+.row {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
 .taste {
   background-color: #7342d6;
   color: white;
@@ -289,3 +297,69 @@ HIGHLIGHTS
   margin-bottom: 16px;
   text-align: center;
 }
+
+
+/* 
+
+FEATURES 
+
+*/
+
+#features {
+  padding-top: 8vw;
+  background-color: rgba(115, 66, 214, 0.1);
+}
+
+.bucher {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -24px;
+}
+
+.buch {
+  width: 25%;
+  padding: 24px;
+  transition: all 300ms ease;
+}
+
+.buch:hover {
+  transform: translateY(-4px);
+}
+
+.buch__img {
+  max-height: 320px;
+  max-width: 250px;
+  transition: all 300ms ease;
+}
+
+.buch__link {
+  color: #242424;
+}
+
+.buch__img--wrapper {
+  margin-bottom: 8px;
+  border-radius: 4px;
+  overflow: hidden;
+  display: flex;
+}
+
+.buch__titel {
+  font-size: 20px;
+  margin-bottom: 8px;
+}
+
+.buch__titel--link {
+  color: #242424;
+}
+
+.buch__ratings {
+  margin-bottom: 8px;
+  color: #fabf2a;
+}
+
+.buch__preis--normal {
+  text-decoration: line-through;
+  padding-right: 6px;
+  color: #bfbfbf;
+}
+
