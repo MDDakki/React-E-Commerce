@@ -5,7 +5,7 @@ import Highlights from "./components/highlights";
 import Featured from "./components/Vorgestellt";
 import Rabatt from "./components/Rabatt";
 import Entdeken from "./components/Entdeken";
-
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -16,6 +16,7 @@ function App() {
       <Featured></Featured>
       <Rabatt></Rabatt>
       <Entdeken></Entdeken>
+      <Footer></Footer>
     </div>
   );
 }
