@@ -262,7 +262,7 @@ HIGHLIGHTS
   height: 12vw;
   left: 0;
   z-index: 1;
-  background-size: cover;
+  background-size: cover; 
   background-repeat: no-repeat;
 }
 
@@ -421,6 +421,31 @@ footer {
 .footer__link {
   padding: 0 8px;
 }
+
+
+/* 
+
+Bücher Seite
+
+*/
+
+
+.bucher__container {
+  padding: 24px 0;
+}
+
+.bucher__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 24px;
+}
+
+/* 
+
+Responsive 
+
+*/
 
 
 @media (max-width: 768px) {

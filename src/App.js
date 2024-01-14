@@ -1,24 +1,23 @@
-
-import NavBar from "./components/nav"
-import Main from "./components/main";
-import Highlights from "./components/highlights";
-import Featured from "./components/Vorgestellt";
-import Rabatt from "./components/Rabatt";
-import Entdeken from "./components/Entdeken";
+import NavBar from "./components/nav";
 import Footer from "./components/Footer";
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import Home from "./components/Seiten/Home";
+import Books from "./components/Seiten/Books";
+
 
 function App() {
   return (
-    <div className="App">
-      <NavBar></NavBar>
-      <Main></Main>
-      <Highlights></Highlights>
-      <Featured></Featured>
-      <Rabatt></Rabatt>
-      <Entdeken></Entdeken>
+    <Router>
+      <div className="App">
+        <NavBar></NavBar>
+        <Routes>
+          <Route path="/" element={<Home></Home>}></Route>
+          <Route path="/books" element={<Books></Books>}></Route>
+        </Routes>
+      </div>
       <Footer></Footer>
-    </div>
+    </Router>
   );
-}
+} 
 
 export default App;
