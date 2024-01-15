@@ -405,7 +405,8 @@ footer {
 }
 
 .footer__logo--img {
-  width: 160px;
+  margin-right: 12px;
+  width: 180px;
   filter: grayscale(1) invert(1);
 }
 
