@@ -476,6 +476,15 @@ select {
   margin-bottom: 0;
 }
 
+.bucher__selected--top {
+  padding: 0 24px;
+  margin-bottom: 8px;
+  font-size: 32px;
+  color: #242424;
+  display: flex;
+  align-items: center;
+}
+
 
 /* 
 

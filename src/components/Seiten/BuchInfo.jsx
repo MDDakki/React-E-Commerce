@@ -1,10 +1,14 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Bewertung from "../ui/Bewertung";
 import Preis from "../ui/Preis";
+import Buch from "../ui/buch";
 
 const BuchInfo = ({ books }) => {
+    const { id } = useParams()
+    const buch = books.find(buch => +buch.id === +id) // convertiert buch.id von string nach nummer mit den + symbol am anfang.
+
     return (
         <div className="bucher__body">
             <main id="bucher__main">
@@ -14,20 +18,20 @@ const BuchInfo = ({ books }) => {
                         <Link to="/books" className="buch__link">
                             <FontAwesomeIcon icon="arrow-left"></FontAwesomeIcon>
                         </Link>
-                        <Link to="/books"><h2 className="buch__selected--titel--top">Bücher</h2>
+                        <Link to="/books"><h2 className="buch__selected--top">Bücher</h2>
                         </Link>
                         </div>  
                         <div className="buch__selected">
                             <figure className="buch__selected--figure">
-                                <img src="https://covers.openlibrary.org/b/id/8091016-L.jpg" alt="" className="buch__selected--img" />
+                                <img src={buch.url} alt="" className="buch__selected--img" />
                             </figure>
                             <div className="buch__selected--description">
-                                <h2 className="buch__selected--titel">Crack The Coding Interview</h2>
-                                <Bewertung  bewertung="4.5"/>
+                                <h2 className="buch__selected--titel">{buch.title}</h2>
+                                <Bewertung  bewertung={buch.rating}/>
                                 <div className="buch__preis">
-                                    <Preis salePreis={20} originalPreis={50}></Preis>
+                                    <Preis salePreis={buch.salePreis} originalPreis={buch.originalPreis}></Preis>
                                 </div>
-                                <div className="buch__zusammenfassung">
+                                <div className="buch__zusammenfassung"> 
                                     <h3 className="buch__zusammenfassung--titel">
                                         Zusammenfassung
                                     </h3>
@@ -49,8 +53,19 @@ const BuchInfo = ({ books }) => {
                     <div className="row">
                         <div className="bucher__selected--top">
                             <h2 className="buch__selected--titel--top">
-                            empfohlene Bücher
+                              empfohlene Bücher
                             </h2>
+                        </div>
+                        <div className="bucher">
+                        {
+                             // Filtert Bücher mit einer Bewertung von 5 und einer unterschiedlichen ID als das aktuelle Buch
+                            books
+                            .filter(buch => buch.rating === 5 && +buch.id !== +id) // + symbol to convert from string to nummer 
+                            // Begrenzt die Anzahl der bucher (4)
+                            .slice(0, 4) 
+                            // Mapt über die gefilterten Bücher und rendert jedes Buch mit der Buch Komponent
+                            .map(buch => <Buch buch={buch} key={buch.id} />)
+                        }
                         </div>
                     </div>
                 </div>

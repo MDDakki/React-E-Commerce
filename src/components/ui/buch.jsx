@@ -9,7 +9,7 @@ const Buch = ({ buch }) => {
 
   return (  
     <div className="buch">
-      <Link to="/">
+      <Link to={`/books/${buch.id}`}>
         <figure className="buch__img--wrapper">
           <img
             src={buch.url}
@@ -19,7 +19,7 @@ const Buch = ({ buch }) => {
         </figure>
       </Link>
       <div className="buch__titel">
-        <Link to="/" className="buch__titel--link">
+        <Link to={`/books/${buch.id}`} className="buch__titel--link">
         {buch.title}
         </Link>
       </div>
