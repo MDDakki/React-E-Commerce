@@ -471,12 +471,21 @@ select {
   max-width: 200px;
 }
 
+.buch__selected--titel--top {
+  margin-left: 10px;
+  margin-bottom: 0;
+}
+
 
 /* 
 
   book/:id
     
 */
+
+.container__buch--selected {
+  padding-top: 16px;
+}
 
 .buch__selected {
   display: flex;
@@ -521,12 +530,12 @@ select {
   font-size: 30px;
 }
 
-.buck__selected--title--top {
+.buck__selected--titel--top {
   margin-left: 10px;
   margin-bottom: 0;
 }
 
-.buch__price {
+.buch__preis {
   font-size: 16px;
   margin: 8px 0 24px 0;
 }
@@ -534,6 +543,27 @@ select {
 .buch__selected--titel {
   margin-bottom: 8px
 }
+
+
+.buch__zusammenfassung {
+  margin-bottom: 16px;
+}
+
+.buch__zusammenfassung--titel {
+  margin-bottom: 12px;
+}
+
+.buch__zusammenfassung--para {
+  margin-bottom: 16px;
+}
+
+/* 
+
+Einkaufs Wagen
+    
+*/
+
+
 
 
 /* 
