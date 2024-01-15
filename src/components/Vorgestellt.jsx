@@ -17,5 +17,5 @@ const Featured = () => {
         </section>
     )
 }
-
+    
 export default Featured 

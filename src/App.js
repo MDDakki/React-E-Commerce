@@ -1,8 +1,10 @@
 import NavBar from "./components/nav";
 import Footer from "./components/Footer";
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import Home from "./components/Seiten/Home";
 import Books from "./components/Seiten/Books";
+import BuchInfo from "./components/Seiten/BuchInfo";
+
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import { books } from "./data";
 
 function App() {
@@ -13,6 +15,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home></Home>}></Route>
           <Route path="/books" element={<Books books={books} />} />
+          <Route path="/books/:id" element={<BuchInfo books={books}/>}></Route>
         </Routes>
       </div>
       <Footer></Footer> 

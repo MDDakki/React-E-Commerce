@@ -454,7 +454,7 @@ Bücher Seite
   background-color: rgb(248,249,250);
 }
 
-.bucher__header--title {
+.bucher__header--titel {
   margin-bottom: 0;
 }
 
@@ -470,6 +470,71 @@ select {
   width: 100%;
   max-width: 200px;
 }
+
+
+/* 
+
+  book/:id
+    
+*/
+
+.buch__selected {
+  display: flex;
+}
+
+.buch__selected--figure {
+  width: 40%;
+  padding: 16px 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.buch__selected--img {
+  max-height: 500px;
+  width: auto;
+  max-width: 100%;
+}
+
+.buch__selected--description {
+  width: 60%;
+  padding: 16px 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.buch__selected--top {
+  padding: 0 24px;
+  margin-bottom: 8px;
+  font-size: 32px;
+  color: #242424;
+  display: flex;
+  align-items: center;
+}
+
+.buch__selected--link {
+  color: #242424;
+}
+
+.fa-arrow-left {
+  font-size: 30px;
+}
+
+.buck__selected--title--top {
+  margin-left: 10px;
+  margin-bottom: 0;
+}
+
+.buch__price {
+  font-size: 16px;
+  margin: 8px 0 24px 0;
+}
+
+.buch__selected--titel {
+  margin-bottom: 8px
+}
+
 
 /* 
 

@@ -1,6 +1,7 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import BibLogo from "../assets/Library.svg";
+import { Link } from "react-router-dom";
 
 const NavBar = () => {
   function OpenMenu() {
@@ -14,27 +15,27 @@ const NavBar = () => {
   return (
     <nav>
       <div className="nav__container">
-        <a href="">
+        <Link to="">
           <img src={BibLogo} alt="" className="logo" />
-        </a>
+        </Link>
         <ul className="nav__liste">
           <li className="nav__list">
-            <a href="/" className="nav__link">
+            <Link to="/" className="nav__link">
               Home
-            </a>
+            </Link>
           </li>
           <li className="nav__list">
-            <a href="/" className="nav__link">
+            <Link to="/books" className="nav__link">
               Bücher
-            </a>
+            </Link>
           </li>
           <button className="taste__menu" onClick={OpenMenu}>
             <FontAwesomeIcon icon="bars" />
           </button>
           <li className="nav__icon">  
-            <a href="/Wagen" className="nav__link">
+            <Link to="/Wagen" className="nav__link">
               <FontAwesomeIcon icon="shopping-cart"></FontAwesomeIcon>
-            </a>
+            </Link>
           </li>
         </ul>
         <div className="menu__backdrop">
@@ -43,19 +44,19 @@ const NavBar = () => {
           </button>
           <ul className="menu__links">
             <li className="menu__list">
-              <a href="/" className="menu__link">
+              <Link to="/" className="menu__link">
                 Home
-              </a>
+              </Link>
             </li>
             <li className="menu__list">
-              <a href="/bucher" className="menu__link">
+              <Link to="/bucher" className="menu__link">
                 Bücher
-              </a>
+              </Link>
             </li>
             <li className="menu__list">
-              <a href="/Wagen" className="menu__link">
+              <Link to="/Wagen" className="menu__link">
                 Wagen
-              </a>
+              </Link>
             </li>
           </ul>
         </div>

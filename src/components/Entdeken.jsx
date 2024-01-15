@@ -1,5 +1,5 @@
 import React from "react";
-
+import { Link } from "react-router-dom";
 
 const Entdeken = () => {
     return (
@@ -9,9 +9,9 @@ const Entdeken = () => {
                     <h2>
                         mehr <span className="purple">Bücher</span> entdeken
                     </h2>
-                    <a href="/books">
+                    <Link to="/books">
                         <button className="taste">Bücher entdeken</button>
-                    </a>
+                    </Link>
                 </div>
             </div>
         </section>
