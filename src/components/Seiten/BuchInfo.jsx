@@ -7,7 +7,7 @@ import Preis from "../ui/Preis";
 const BuchInfo = ({ books }) => {
     return (
         <div className="bucher__body">
-            <div className="bucher__main">
+            <main id="bucher__main">
                 <div className="bucher__container">
                     <div className="row">
                         <div className="buch__selected--top">
@@ -45,7 +45,16 @@ const BuchInfo = ({ books }) => {
                         </div>
                     </div>
                 </div>
-            </div>
+                <div className="bucher__container">
+                    <div className="row">
+                        <div className="bucher__selected--top">
+                            <h2 className="buch__selected--titel--top">
+                            empfohlene Bücher
+                            </h2>
+                        </div>
+                    </div>
+                </div>
+            </main>
         </div>
     )
 }
