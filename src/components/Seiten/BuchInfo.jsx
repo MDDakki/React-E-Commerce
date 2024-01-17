@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { Link, useParams } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Bewertung from "../ui/Bewertung";
@@ -64,9 +64,9 @@ const BuchInfo = ({ books, zumWagen, wagen }) => {
                     // checkt ob das Buch bereits im Einkaufswagen existiert indem die Funktion BuchExist() aufgerufen wird
                     BuchExist() ? (
                         // Wenn das Buch in dem Einkaufswagen existiert wird ein Link zum Checkout angezeigt
-                        <Link to={`/wagen}`} className="buch__link">
+                        <Link to={"/wagen"} className="buch__link">
                             <button className="taste">Checkout</button>
-                        </Link>
+                        </Link> 
                     ) : (
                         // Wenn das Buch nicht im Einkaufswagen existiert wird ein Button zum Hinzufügen in den Einkaufswagen angezeigt
                         <button className="taste" onClick={() => zumWagen(buch)}>

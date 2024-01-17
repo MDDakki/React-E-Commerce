@@ -13,22 +13,37 @@ function App() {
   const [wagen, setWagen] = useState([])
 
   function zumWagen(buch) {
-    setWagen([...wagen, buch])
+    setWagen([...wagen, {...buch, menge: 1}])
   } 
+
+  function BuchEntfernen(item) {
+    setWagen(wagen.filter(buch => buch.id !== item.id))
+  }
+
+  function MengeAnpassen(buch, menge) {
+    setWagen(wagen.map(item => {
+        if (item.id === buch.id) {
+          return {...item, menge: +menge}
+        }
+        else {
+          return item
+        }
+      }))
+  }
 
   useEffect(() => {
     console.log(wagen)
   }, [wagen]) 
   
   return (
-    <Router>
+    <Router>  
       <div className="App">
         <NavBar></NavBar>
         <Routes>
           <Route path="/" element={<Home></Home>}></Route>
           <Route path="/books" element={<Books books={books} />} />
           <Route path="/books/:id" element={<BuchInfo books={books} zumWagen={zumWagen} wagen={wagen}/>}></Route>
-          <Route path="/wagen" element={<Wagen books={books} wagen={wagen}/>}></Route>
+          <Route path="/wagen" element={<Wagen books={books} wagen={wagen} MengeAnpassen={MengeAnpassen} BuchEntfernen={BuchEntfernen} />}></Route>
         </Routes>
       </div>  
       <Footer></Footer> 
