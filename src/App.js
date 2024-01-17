@@ -6,6 +6,7 @@ import BuchInfo from "./components/Seiten/BuchInfo";
 
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import { books } from "./data";
+import Wagen from "./components/Seiten/Wagen";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
           <Route path="/" element={<Home></Home>}></Route>
           <Route path="/books" element={<Books books={books} />} />
           <Route path="/books/:id" element={<BuchInfo books={books}/>}></Route>
+          <Route path="/wagen" element={<Wagen books={books}/>}></Route>
         </Routes>
       </div>  
       <Footer></Footer> 

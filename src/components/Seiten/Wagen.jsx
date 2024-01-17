@@ -10,6 +10,13 @@ const Wagen = () => {
                         <div className="buch__selected--top">
                             <h2 className="wagen__titel">Wagen</h2>
                         </div>
+                        <div className="wagen">
+                            <div className="wagen__header">
+                                <div className="wagen__buch">Buch</div>
+                                <div className="wagen__menge">Menge</div>
+                                <div className="wagen__gesamt">Preis</div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </main>

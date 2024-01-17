@@ -60,7 +60,7 @@ const BuchInfo = ({ books }) => {
                         {
                              // Filtert Bücher mit einer Bewertung von 5 und einer unterschiedlichen ID als das aktuelle Buch
                             books
-                            .filter(buch => buch.rating === 5 && +buch.id !== +id) // + symbol to convert from string to nummer 
+                            .filter(buch => buch.rating === 5 && +buch.id !== +id) // + symbol to conve rt from string to nummer 
                             // Begrenzt die Anzahl der bucher (4)
                             .slice(0, 4) 
                             // Mapt über die gefilterten Bücher und rendert jedes Buch mit der Buch Komponent

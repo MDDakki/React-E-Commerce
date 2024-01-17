@@ -573,7 +573,37 @@ Einkaufs Wagen
 */
 
 
+.wagen__header {
+  background-color: #7342d6;
+  margin: 0 24px;
+  padding: 8px 16px;
+  color: white;
+  display: flex;
+}
 
+.wagen__title {
+  margin-bottom: 16px;
+}
+
+.wagen__buch {
+  width: 60%;
+  display: flex;
+}
+
+.wagen__menge {
+  width: 40%;
+  display: flex;
+  align-items: center;
+}
+
+.wagen__gesamt {
+  width: 100%;
+  max-width: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  font-size: 18px;
+}
 
 /* 
 
@@ -582,6 +612,7 @@ Responsive
 */
 
 
+/* Kleine Smartphones, Tablets, Grosse smartphones */
 @media (max-width: 768px) {
   .header__description {
     padding: 0 24px;
@@ -602,9 +633,20 @@ Responsive
   .buch {
     width: 50%;
   }
+
+  .buch__selected {
+    flex-direction: column;
+  }
+  .buch__selected--figure {
+    width: 100%;
+    justify-content: flex-start;
+  }
+  .buch__selected--description {
+    width: 100%;
+  }
 }
 
-
+/* Kleine SmartPhones , Grosse SmartPhones */
 @media (max-width: 550px) {
   .taste__menu {
     display: block;
@@ -621,4 +663,5 @@ Responsive
   .highlight:not(:last-child) {
     margin-bottom: 24px;
   }
+
 }

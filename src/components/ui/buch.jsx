@@ -23,7 +23,7 @@ const Buch = ({ buch }) => {
         {buch.title}
         </Link>
       </div>
-      <Bewertung bewertung={buch.rating}></Bewertung>
+      <Bewertung bewertung={buch.rating}></Bewertung> 
       <Preis salePreis={buch.salePreis} originalPreis={buch.originalPreis}></Preis>
     </div>
   );
