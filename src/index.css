@@ -581,7 +581,7 @@ Einkaufs Wagen
   display: flex;
 }
 
-.wagen__title {
+.wagen__titel {
   margin-bottom: 16px;
 }
 
@@ -603,6 +603,83 @@ Einkaufs Wagen
   align-items: center;
   justify-content: flex-end;
   font-size: 18px;
+}
+
+
+
+.wagen__buch--img {
+  width: 100%;
+  max-width: 90px;
+  max-height: 128px;
+}
+
+.wagen__item {
+  margin: 24px;
+  display: flex;
+  padding-right: 8px;
+}
+
+.wagen__buch--info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 8px 16px;
+}
+
+.wagen__buch--titel {
+  font-size: 20px;
+  margin-bottom: 4px;
+}
+
+.wagen__buch--preis {
+  margin-bottom: 12px;
+}
+
+.wagen__buch--entfernen {
+  background-color: transparent;
+  color: #cf0000;
+  border: none;
+  padding-left: 0;
+  width: 48px;
+}
+
+.wagen__input {
+  padding: 8px;
+  width: 60px;
+}
+
+.gesamt {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  padding: 0 24px;
+  width: 100%;
+  max-width: 300px;
+  margin-left: auto;
+  font-size: 16px;
+}
+
+.gesamt__item {
+  font-size: 18px;
+  margin-bottom: 24px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.gesamt__sub-total {
+  border-top: 2px solid #7342d6;
+  padding-top: 24px;
+}
+
+.gesamt__preis {
+  font-weight: bold;
+}
+
+.taste__checkout {
+  width: 100%;
+  font-size: 16px;
+  padding: 12px 0;
 }
 
 /* 
