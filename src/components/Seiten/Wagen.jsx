@@ -1,4 +1,6 @@
 import React from "react";
+import LehrWagen from "./img/empty_cart.svg"
+import { Link } from "react-router-dom";
 
 const Wagen = ({wagen, MengeAnpassen, BuchEntfernen}) => {
 
@@ -53,8 +55,17 @@ const Wagen = ({wagen, MengeAnpassen, BuchEntfernen}) => {
                                     })
                                 }    
                                 </div>
+                                {
+                                wagen.length === 0 &&
+                                <div className="wagen__lehr">
+                                    <img src={LehrWagen} alt="" className="wagen__lehr--img" />
+                                    <h2>Sie haben keine Bücher in Ihrem Warenkorb</h2>
+                                    <Link to="/books">
+                                        <button className="taste">Bücher durchsuchen</button>
+                                    </Link>
+                                </div>}
                         </div>
-                        <div className="gesamt">
+                       {wagen.length > 0 && <div className="gesamt">
                             <div className="gesamt__item gesamt__sub-total">
                                 <span>Subtotal</span>
                                 <span>€{(gesamt() * 0.9).toFixed(2)}</span>
@@ -70,7 +81,7 @@ const Wagen = ({wagen, MengeAnpassen, BuchEntfernen}) => {
                             <button className="taste taste__checkout no-cursor" onClick={() => alert('Noch nicht Implementiert')}>
                                 Fortfahren
                             </button>
-                        </div>
+                        </div>}
                     </div>
                 </div>
             </main>

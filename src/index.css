@@ -647,6 +647,19 @@ Einkaufs Wagen
   width: 60px;
 }
 
+.wagen__lehr {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.wagen__lehr--img {
+  padding: 40px;
+  max-width: 400px;
+}
+
+
 .gesamt {
   display: flex;
   flex-direction: column;
