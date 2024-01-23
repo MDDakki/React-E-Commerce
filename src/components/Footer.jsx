@@ -19,7 +19,7 @@ const Footer = () => {
                         <Link to="/wagen" className="footer__link">Wagen</Link>
                     </div>
                     <div className="footer__copyright">
-                        Copyright © 2024 🤫🤫
+                        Copyright © 2024 Bibilothek
                     </div>
                 </div>
             </div>

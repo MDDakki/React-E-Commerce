@@ -19,6 +19,14 @@ function App() {
   function BuchEntfernen(item) {
     setWagen(wagen.filter(buch => buch.id !== item.id))
   }
+  
+  function Anzahl() {
+    let counter = 0 
+    wagen.forEach(item => {
+      counter += item.menge
+    })   
+    return counter
+  }
 
   function MengeAnpassen(buch, menge) {
     setWagen(wagen.map(item => {
@@ -38,7 +46,7 @@ function App() {
   return (
     <Router>  
       <div className="App">
-        <NavBar></NavBar>
+        <NavBar Anzahl={Anzahl()}></NavBar>
         <Routes>
           <Route path="/" element={<Home></Home>}></Route>
           <Route path="/books" element={<Books books={books} />} />

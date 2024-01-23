@@ -659,6 +659,21 @@ Einkaufs Wagen
   max-width: 400px;
 }
 
+.wagen__length {
+  background-color: red;
+  color: white;
+  width: 18px;
+  height: 18px;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 4px;
+  right: -4px;
+  pointer-events: none;
+}
 
 .gesamt {
   display: flex;
