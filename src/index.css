@@ -709,6 +709,36 @@ Einkaufs Wagen
   padding: 12px 0;
 }
 
+/* Skelet Laden */
+
+.buch__img--skelet {
+  width: 100%;
+  max-width: 250px;
+  height: 320px;
+  background-color: rgb(204, 204, 204);
+  margin-bottom: 8px;
+}
+
+.skelet {
+  background-color: rgb(227, 227, 227) !important;
+  margin-bottom: 8px;
+}
+
+.buch__titel--skelet {
+  height: 21px;
+  width: 100%;
+}
+
+.buch__rating--skelet {
+  width: 100px;
+  height: 19px;
+}
+
+.buchk__preis--skelet {
+  width : 200px;
+  height: 19px;
+}
+
 /* 
 
 Responsive 
